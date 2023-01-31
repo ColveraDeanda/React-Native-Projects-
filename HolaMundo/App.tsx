@@ -1,12 +1,21 @@
 import React from 'react';
-import ContadorScreen from './src/screens/ContadorScreen';
+import { SafeAreaView } from 'react-native';
+import FlexScreen from './src/screens/styledScreenComponentsEj/FlexScreen';
 
 /* rafc = Snippet component*/
 
 const App = () => {
   return (
-      <ContadorScreen/>
-      // <HolaMundoScreen/>
+    <SafeAreaView style={{flex: 1}}>
+       {/* <ContadorScreen/> */}
+       {/* <HolaMundoScreen/> */}
+       {/* <BoxObjectModelScreen></BoxObjectModelScreen> */}
+       {/* <DimensionsScreen/> */}
+       {/* <PositionScreenRelative></PositionScreenRelative> */}
+       {/* <PositionScreenAbsolute></PositionScreenAbsolute> */}
+       <FlexScreen></FlexScreen>
+    </SafeAreaView>
+     
   );
 };
 
