@@ -1,6 +1,6 @@
 import React from 'react';
 import { SafeAreaView } from 'react-native';
-import FlexScreen from './src/screens/styledScreenComponentsEj/FlexScreen';
+import TareaScreen from './src/screens/TareaScreen';
 
 /* rafc = Snippet component*/
 
@@ -13,7 +13,13 @@ const App = () => {
        {/* <DimensionsScreen/> */}
        {/* <PositionScreenRelative></PositionScreenRelative> */}
        {/* <PositionScreenAbsolute></PositionScreenAbsolute> */}
-       <FlexScreen></FlexScreen>
+       {/* <FlexScreen></FlexScreen> */}
+       {/* <FlexDirection></FlexDirection> */}
+       {/* <JustifyContent></JustifyContent> */}
+       {/* <AlignItems></AlignItems> */}
+       {/* <AlignSelf></AlignSelf> */}
+       {/* <FlexWrap></FlexWrap> */}
+       <TareaScreen></TareaScreen>
     </SafeAreaView>
      
   );
