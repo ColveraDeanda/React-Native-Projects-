@@ -14,12 +14,12 @@ const TareaScreen = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#28425B',
+        backgroundColor: '#28425B',  
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        flexDirection: 'row'
     },
     purpleBox: {
-        top: 100,
         width: 100,
         height: 100,
         borderWidth: 10,
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#5856D6'
     },
     orangeBox: {
-        left: 100,
+        top: 50,
         width: 100,
         height: 100,
         borderWidth: 10,
