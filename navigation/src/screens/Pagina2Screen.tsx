@@ -11,8 +11,7 @@ const Pagina2Screen = () => {
 
     return (
         <View style={styles.globalMargin}>
-            <Text>Pagina2Screen</Text>
-
+            <Text style={styles.title}>Pagina 2 Screen</Text>
             <Button
                 title='Ir página 3'
                 onPress={() => navigator.navigate('Pagina3Screen')}
