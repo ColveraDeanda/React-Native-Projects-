@@ -32,15 +32,12 @@ const Banner = () => {
 					/>
 				</TouchableOpacity>
 			</View>
-
-			<View style={styles.rowUser}>
-				<TouchableOpacity>
+			<TouchableOpacity>
+				<View style={styles.rowUser}>
 					<FontAwesomeIcon style={styles.user} icon="user" size={21} />
-				</TouchableOpacity>
-				<TouchableOpacity>
 					<Text style={styles.username}>(Username here)</Text>
-				</TouchableOpacity>
-			</View>
+				</View>
+			</TouchableOpacity>
 		</View>
 	);
 };
@@ -63,8 +60,8 @@ const styles = StyleSheet.create({
 	},
 	rowUser: {
 		flexDirection: 'row',
-		marginTop: 10,
 		marginLeft: 18,
+		marginVertical: 10,
 		justifyContent: 'flex-start',
 	},
 	bars: {
