@@ -7,19 +7,11 @@ import Banner from './src/screens/Banner';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fontAwesomeLibreary } from './src/icons/FontAwesomeIcons';
 import { DATA } from './src/data/items';
+import ItemList from './src/components/ItemList';
 
 
 library.add(...fontAwesomeLibreary);
 
-
-
-type ItemProps = { title: string };
-
-const Item = ({ title }: ItemProps) => (
-  <View style={styles.item}>
-    <Text style={styles.title}>{title}</Text>
-  </View>
-);
 
 /* rafc = Snippet component*/
 
@@ -42,13 +34,7 @@ const App = () => {
         {/* <TareaScreen></TareaScreen> */}
         <Navigator/>
         {/* Sample data List */}
-        {/* <View style={{ top: 100 }}>
-          <FlatList
-            data={DATA}
-            renderItem={({ item }) => <Item title={item.title} />}
-            keyExtractor={item => item.id}
-          />
-        </View> */}
+       
       </SafeAreaView>
     </NavigationContainer>
 
@@ -56,16 +42,6 @@ const App = () => {
 };
 
 
-const styles = StyleSheet.create({
-  item: {
-    backgroundColor: '#787A91',
-    padding: 20,
-    marginVertical: 8,
-    marginHorizontal: 16,
-  },
-  title: {
-    fontSize: 32,
-  },
-});
+
 
 export default App;

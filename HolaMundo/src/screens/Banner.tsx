@@ -8,45 +8,51 @@ import {
 } from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { StackScreenProps } from '@react-navigation/stack';
+import ItemList from '../components/ItemList';
 
 interface Props extends StackScreenProps<any, any> { }
 
 const Banner = ({ navigation }: Props) => {
 
 	return (
-		<View style={styles.container}>
-			<View style={styles.row}>
-				<TouchableOpacity>
-					<FontAwesomeIcon style={styles.bars} icon="bars" size={26} />
-				</TouchableOpacity>
-				<TextInput
-					inlineImageLeft="search"
-					inlineImagePadding={10}
-					autoCorrect={false}
-					returnKeyType="search"
-					style={styles.inputSearch}
-					placeholder="Search"
-					autoCapitalize="none"
-				/>
-				
-				<TouchableOpacity
-					onPress={() => navigation.navigate('ShoppingCart')}
-				>
-					<FontAwesomeIcon
-						style={styles.cartShopping}
-						icon="cart-shopping"
-						size={23}
+		<View>
+			<View style={styles.container}>
+				<View style={styles.row}>
+					<TouchableOpacity>
+						<FontAwesomeIcon style={styles.bars} icon="bars" size={26} />
+					</TouchableOpacity>
+					<TextInput
+						inlineImageLeft="search"
+						inlineImagePadding={10}
+						autoCorrect={false}
+						returnKeyType="search"
+						style={styles.inputSearch}
+						placeholder="Search"
+						autoCapitalize="none"
 					/>
-				</TouchableOpacity>
-			</View>
 
-			<View style={styles.rowUser}>
-				<TouchableOpacity>
-					<FontAwesomeIcon style={styles.user} icon="user" size={21} />
-				</TouchableOpacity>
-				<TouchableOpacity>
-					<Text style={styles.username}>(Username here)</Text>
-				</TouchableOpacity>
+					<TouchableOpacity
+						onPress={() => navigation.navigate('ShoppingCart')}
+					>
+						<FontAwesomeIcon
+							style={styles.cartShopping}
+							icon="cart-shopping"
+							size={23}
+						/>
+					</TouchableOpacity>
+				</View>
+
+				<View style={styles.rowUser}>
+					<TouchableOpacity>
+						<FontAwesomeIcon style={styles.user} icon="user" size={21} />
+					</TouchableOpacity>
+					<TouchableOpacity>
+						<Text style={styles.username}>(Username here)</Text>
+					</TouchableOpacity>
+				</View>
+			</View>
+			<View style={{marginTop: 100}}>
+				<ItemList/>
 			</View>
 		</View>
 	);
