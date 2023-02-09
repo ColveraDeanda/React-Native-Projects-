@@ -4,11 +4,15 @@ import {
 	View,
 	StyleSheet,
 	TextInput,
-	TouchableOpacity,
+	TouchableOpacity
 } from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { StackScreenProps } from '@react-navigation/stack';
 
-const Banner = () => {
+interface Props extends StackScreenProps<any, any> { }
+
+const Banner = ({ navigation }: Props) => {
+
 	return (
 		<View style={styles.container}>
 			<View style={styles.row}>
@@ -24,7 +28,10 @@ const Banner = () => {
 					placeholder="Search"
 					autoCapitalize="none"
 				/>
-				<TouchableOpacity>
+				
+				<TouchableOpacity
+					onPress={() => navigation.navigate('ShoppingCart')}
+				>
 					<FontAwesomeIcon
 						style={styles.cartShopping}
 						icon="cart-shopping"
