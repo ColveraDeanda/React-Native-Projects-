@@ -1,18 +1,22 @@
 import React from 'react';
 import {
-	Text,
 	View,
 	StyleSheet,
 	TextInput,
 	TouchableOpacity
 } from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { StackScreenProps } from '@react-navigation/stack';
 import ItemList from '../components/ItemList';
+import { useNavigation } from '@react-navigation/native';
 
-interface Props extends StackScreenProps<any, any> { }
+/* interface Props extends StackScreenProps<any, any> { } */
+interface Props {
+	standAlone?: boolean
+}
 
-const Banner = ({ navigation }: Props) => {
+const Banner = ({ standAlone = false }: Props) => {
+
+	const navigation = useNavigation();
 
 	return (
 		<View>
@@ -42,18 +46,23 @@ const Banner = ({ navigation }: Props) => {
 					</TouchableOpacity>
 				</View>
 
-				<View style={styles.rowUser}>
+				{/* <View style={styles.rowUser}>
 					<TouchableOpacity>
 						<FontAwesomeIcon style={styles.user} icon="user" size={21} />
 					</TouchableOpacity>
 					<TouchableOpacity>
 						<Text style={styles.username}>(Username here)</Text>
 					</TouchableOpacity>
+				</View> */}
+			</View>
+			{
+				(!standAlone) &&
+				<View style={{ marginTop: 70 }}>
+					{/* //* HOME PAGE HERE */}
+					<ItemList />
 				</View>
-			</View>
-			<View style={{marginTop: 100}}>
-				<ItemList/>
-			</View>
+			}
+
 		</View>
 	);
 };
@@ -61,7 +70,7 @@ const Banner = ({ navigation }: Props) => {
 const styles = StyleSheet.create({
 	container: {
 		backgroundColor: '#263159',
-		height: 100,
+		height: 70,
 		justifyContent: 'center',
 		position: 'absolute',
 		top: 0,

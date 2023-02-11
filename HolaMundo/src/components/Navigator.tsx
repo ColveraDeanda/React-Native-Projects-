@@ -7,6 +7,7 @@ import ItemList from './ItemList';
 // A continucación se define el tipo de dato que podría llegar al pasarle args de una screen a otra mediente navigation.
 // Nota: Si el screen no está recibiendo params, se pondrá undefined. En caso contrario, se define el obj y su tipo de dato.
 
+
 const Stack = createStackNavigator();
 
 // Stack navigator tiene múltiples propiedades para que se vea mejor. Por ejem. 
