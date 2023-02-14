@@ -1,14 +1,15 @@
 import { Button, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import { StackScreenProps } from '@react-navigation/stack';
 import { styles } from '../theme/appTheme';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { DrawerScreenProps } from '@react-navigation/drawer';
 
-interface Props extends StackScreenProps<any, any> { }
+interface Props extends DrawerScreenProps<any, any> { }
 
 // * Pagina1Screen está recibiendo Props de StackNavigator.tsx
 // * Con la propiedad navigation.navigate, se puede navegar a otra screen.
 const Pagina1Screen = ({ navigation }: Props) => {
+
     return (
         <View style={styles.globalMargin}>
             <Text style={styles.title}>Pagina 1 Screen</Text>
@@ -24,6 +25,13 @@ const Pagina1Screen = ({ navigation }: Props) => {
                 <Button
                     title="Ir página persona"
                     onPress={() => navigation.navigate('PersonaScreen')}
+                />
+            </View>
+
+            <View style={styles.marginButton}>
+                <Button
+                    title="Abrir menú lateral"
+                    onPress={() => navigation.toggleDrawer()}
                 />
             </View>
 

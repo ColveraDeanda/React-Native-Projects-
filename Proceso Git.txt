@@ -31,12 +31,14 @@ hotfix = Se crea solo si sale un tema de ultimo momento.
 
 ==============================================================================================================
 1. Configurar userName y Correo de Deloitte con los comandos globales.
-2. Crear repositorio en la cuenta de Deloitte con el nombre = pensar en algún nombre Banner-DT-Cristobal.
+2. Crear repositorio en la cuenta de Deloitte con el nombre = pensar en algún nombre Banner-DT-Cristobal ó eCommerceApp
 3. Configurarar la parte de SSH con GitHub.
 4. Hacer un git clone: git clone <pegar aquí URL de SSH>
 5. Meterse al proyecto y darle 'code .' para abrirlo con VS code.
 6. Crear el proyecto con react-native cli e implementar estructura base de carpetas del proyecto. (Ponerles un txt para que agarre las carpetas).
-7. git status para comprobrar el status del proyectoy empezar con el primer commit.
+Nota: Tomar en cuenta que se generará una nueva carpeta al crear el proyecto. Cuando eso pase, será necesario cortar todo lo dentro de la carpeta,
+      y pegarlo afuera.
+7. git status para comprobrar el status del proyecto y empezar con el primer commit.
 8. git add .
 9. git commit -m "First commit"
 10. git push (solo git push) estando en master.
@@ -44,17 +46,23 @@ hotfix = Se crea solo si sale un tema de ultimo momento.
     - Hacer ramas: 
 	release / Test / QA = Usar release
 	Develop
-	Feature = Ramas individuales (mia para trabajo). // Banner/userStory-devName = Nombre de la rama
+	Feature = Ramas individuales (mia para trabajo). // Feature/Banner-Cristobal = Nombre de la rama
 12. Hacer mi desarrollo en Feature y probar que todo funcione bien.
 13. Paso el código a la siguiente rama Develop y checo que todo esté bien.
 14. Paso el código a la siguiente rama Release y checo que todo esté bien.
 15. Finalmente paso todo el código a master.
 
+Duda: Teniendo ya el repo con el feature de Banner funcionando al 100%. Ahora se quiere hacer una nueva feature, se tienen
+que hacer un nuevo proyecto y nuevo repositorio para esa feature ?.. o se puede continuar en el mismo proyecto con una nueva rama ?
+
+NOTA: Al crear una nueva branch, tengo que conectarla con el repositorio remoto usando: git push --set-upstream origin <Nombre de la rama>
 
 
 
-
-
+///////////
+Comandos a tomar en cuenta:
+- git branch = mostrará las ramas actuales.
+- git checkout <Nombre_Rama>
 
 
 

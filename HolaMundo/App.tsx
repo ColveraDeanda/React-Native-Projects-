@@ -1,13 +1,10 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { Navigator } from './src/components/Navigator';
-import { FlatList, SafeAreaView, Text, View, StyleSheet } from 'react-native';
-import Banner from './src/screens/Banner';
+import {  SafeAreaView} from 'react-native';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fontAwesomeLibreary } from './src/icons/FontAwesomeIcons';
-import { DATA } from './src/data/items';
-import ItemList from './src/components/ItemList';
+import TareaScreen from './src/screens/TareaScreen';
 
 
 library.add(...fontAwesomeLibreary);
@@ -31,8 +28,8 @@ const App = () => {
         {/* <AlignItems></AlignItems> */}
         {/* <AlignSelf></AlignSelf> */}
         {/* <FlexWrap></FlexWrap> */}
-        {/* <TareaScreen></TareaScreen> */}
-        <Navigator/>
+        <TareaScreen></TareaScreen>
+        {/* <Navigator/> */}
         {/* Sample data List */}
        
       </SafeAreaView>
